@@ -40,6 +40,8 @@ percent_increase = ((89-82)/82)
 print(percent_increase)
 print('your percent increase would be {:.2%}'.format(percent_increase))
 
-
+2 + 2 == 4
+type(none)
+4/2+1.0
 
 
