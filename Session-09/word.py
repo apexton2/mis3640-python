@@ -42,10 +42,10 @@
 # print(has_no_e('College'))
 
 
-# def avoids(word, forbidden):
-#     for letter in word:
-#        if letter == 'e':
-#             return False
+def avoids(word, forbidden):
+    for letter in word:
+       if letter == 'e':
+            return False
 #     return True
 #     """
 #     takes a word and a string of forbidden letters, and that returns True
@@ -108,32 +108,89 @@
 # print(is_abecedarian('abs'))
 # print(is_abecedarian('college'))
 
-fin = open("Session-09/words.txt")
+# fin = open("Session-09/words.txt")
 
-def is_double_triple(word):
-  i = 0 
-  count = 0
-  while i < len(word)-1:
-    if word[i] == word[i+1]:
-        count = count + 1
-        if count == 3:
-          return True
-        i = i + 2
-    else:
-        count = 0
-        i = i + 1
-  return False
+# def is_double_triple(word):
+#   i = 0 
+#   count = 0
+#   while i < len(word)-1:
+#     if word[i] == word[i+1]:
+#         count = count + 1
+#         if count == 3:
+#           return True
+#         i = i + 2
+#     else:
+#         count = 0
+#         i = i + 1
+#   return False
 
-  def find_double_triple(word):
-    fin = open("Session-09/words.txt")
-    for line in fin:
-        word = line.strip()
-        if is_double_triple(word):
-              print (word)
-              find_double_triple(fin)
-              print(fin)
+#   def find_double_triple(word):
+#     fin = open("Session-09/words.txt")
+#     for line in fin:
+#         word = line.strip()
+#         if is_double_triple(word):
+
+#           print(find_double_triple)
+#               print (word)
+#               find_double_triple(fin)
+#               print(fin)
 
 # print 'Here are all the words in the list that have'
 # print 'three consecutive double letters.'
 # find_triple_double()
 # print
+
+# def avoids(word, forbidden):
+#   for letter in word:
+#     if letter in forbidden:
+#       return False
+#     return True
+
+
+#   print(avoids('baboson, abdce'))
+
+def uses_only(word, available):
+    """
+    takes a word and a string of letters, and that returns True if the word
+    contains only letters in the list.
+    """
+    for letter in word:
+        if letter not in available:
+            return False
+    return True
+
+
+def uses_all(word, required):
+    # fin = open("Session-09/words.txt")
+    # for letter in required:
+    #   if letter not in word:
+    #     return False
+    # return True
+    return uses_only(required, word)
+
+print(uses_all('Babson', 'abs'))
+print(uses_all('college', 'abs'))
+
+def find_words_using_all_vowels():
+    fin = open("Session-09/words.txt")
+    counter = 0
+    for line in fin:
+      word = line.strip()
+      # if ...
+      return counter
+
+      print('the number of words that use all the vowels:',find_words_using_all_vowels())
+    
+
+    def find_words_no_vowels():
+        fin = open("Session-09/words.txt")
+        counter_no_vowel = 0
+        counter_total = 0
+        for line in fin:
+          counter_total += 1
+          word = line.strip()
+          if avoids(word, 'aeiouy'):
+           print(word)
+          counter_no_vowel += 1
+        return counter_no_vowel/counter_total
+    
