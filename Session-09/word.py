@@ -91,13 +91,13 @@ def avoids(word, forbidden):
 # print(uses_all('college', 'abs'))
 
 
-# def is_abecedarian(word):
-#     previous = word[0]
-#     for c in word:
-#         if c < previous:
-#             return False
-#         previous = c
-#     return True
+def is_abecedarian(word):
+    previous = word[0]
+    for c in word:
+        if c < previous:
+            return False
+        previous = c
+    return True
 #     """
 #     returns True if the letters in a word appear in alphabetical order
 #     (double letters are ok).
@@ -193,4 +193,6 @@ def find_words_using_all_vowels():
            print(word)
           counter_no_vowel += 1
         return counter_no_vowel/counter_total
+
+
     

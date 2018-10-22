@@ -100,3 +100,76 @@ print(t)
 print(t2)
 
 
+def is_sorted(t):
+    """Checks whether a list is sorted.
+    t: list
+    returns: boolean
+    Expected output:
+    >>> is_sorted([1, 2, 2])
+    True
+    >>> is_sorted(['b', 'a'])
+    False
+    """
+    return
+
+def is_sorted(t):
+    previous = t[0]
+    for c in t:
+        if c < previous:
+            return False
+        previous = c
+    return True
+
+    return t == sorted(t)
+
+print(is_sorted(['a', 'b', 'b', 'c']))
+print(is_sorted(['a', 'b', 'c', 'b']))
+
+
+def is_anagram(word1, word2):
+    """Checks whether two words are anagrams
+    Two words are anagrams if you can rearrange the letters from one to 
+    spell the other.
+    word1: string or list
+    word2: string or list
+    returns: boolean
+    Expected output:
+    >>> is_anagram('stop', 'pots')
+    True
+    >>> is_anagram('different', 'letters')
+    False
+    >>> is_anagram([1, 2, 2], [2, 1, 2])
+    Ture
+    """
+    return sorted(word1) == sorted(word2)
+    
+print(is_anagram('stop', 'pots'))
+print(is_anagram([1, 2, 2], [2, 1, 2]))
+
+def has_duplicates(s):
+    """Returns True if any element appears more than once in a sequence.
+    s: string or list
+    returns: bool
+    output:
+    >>> print(has_duplicates('cba'))
+    False
+    >>> print(has_duplicates('abba'))
+    True
+    """
+
+def has_adjacent_duplicates(s):
+    """Returns True if there are two same adjacent elements.
+    s: string or list
+    returns: bool
+    output:
+    >>> print(has_adjacent_duplicates('cba'))
+    False
+    >>> print(has_adjacent_duplicates('abca'))
+    Flase
+    >>> print(has_adjacent_duplicates('abbc'))
+    True
+    """
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            return True
+    return false
